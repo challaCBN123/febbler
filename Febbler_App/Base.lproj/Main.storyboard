@@ -1,24 +1,263 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HYa-iM-0gB">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--HomeVC-->
+        <scene sceneID="WES-fG-rLb">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="HomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aUY-Tl-L16" customClass="HomeVC" customModule="Febbler_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M6P-m4-2Nc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hcx-E9-ERI">
+                                <rect key="frame" x="0.0" y="846" width="414" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kOq-M1-wME">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsK-sA-i19" userLabel="Home">
+                                                <rect key="frame" x="0.0" y="0.0" width="74.666666666666671" height="50"/>
+                                                <color key="tintColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="house.fill" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jep-fz-tEH" userLabel="Camera">
+                                                <rect key="frame" x="84.666666666666671" y="0.0" width="75.000000000000014" height="50"/>
+                                                <color key="tintColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="camera.fill" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="Oyc-Ya-8XU" kind="showDetail" id="vTZ-lZ-hiw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p53-D7-EvY" userLabel="Search">
+                                                <rect key="frame" x="169.66666666666666" y="0.0" width="74.666666666666657" height="50"/>
+                                                <color key="tintColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="magnifyingglass" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="cQC-lk-QDl" kind="showDetail" id="54i-6h-AVW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DB6-WN-0AS" userLabel="Notification">
+                                                <rect key="frame" x="254.33333333333337" y="0.0" width="75" height="50"/>
+                                                <color key="tintColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="flag.fill" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="0ol-Nd-DyX" kind="showDetail" id="vP0-hY-8BA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLA-iU-dL2" userLabel="Profile">
+                                                <rect key="frame" x="339.33333333333331" y="0.0" width="74.666666666666686" height="50"/>
+                                                <color key="tintColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="a.circle.fill" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="J31-27-3XI" kind="showDetail" id="F60-Rh-qaf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.82178403253424659" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0y8-SP-MyB"/>
+                                    <constraint firstItem="kOq-M1-wME" firstAttribute="leading" secondItem="hcx-E9-ERI" secondAttribute="leading" id="dfo-8E-Mnq"/>
+                                    <constraint firstAttribute="bottom" secondItem="kOq-M1-wME" secondAttribute="bottom" id="e5c-fU-V46"/>
+                                    <constraint firstAttribute="trailing" secondItem="kOq-M1-wME" secondAttribute="trailing" id="oMy-Fl-m07"/>
+                                    <constraint firstItem="kOq-M1-wME" firstAttribute="top" secondItem="hcx-E9-ERI" secondAttribute="top" id="vg3-VG-v1x"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.24918702411167515" green="0.24918702411167515" blue="0.24918702411167515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hcx-E9-ERI" firstAttribute="trailing" secondItem="3Rd-v3-VuD" secondAttribute="trailing" id="I08-bH-9Ah"/>
+                            <constraint firstAttribute="bottom" secondItem="hcx-E9-ERI" secondAttribute="bottom" id="Qht-qA-lPT"/>
+                            <constraint firstItem="hcx-E9-ERI" firstAttribute="leading" secondItem="3Rd-v3-VuD" secondAttribute="leading" id="YgG-C5-9LD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Rd-v3-VuD"/>
                     </view>
+                    <navigationItem key="navigationItem" id="gHl-qx-1QW"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oVC-5x-rVm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1877" y="-415"/>
+        </scene>
+        <!--CameraVC-->
+        <scene sceneID="uDg-wx-Rff">
+            <objects>
+                <viewController storyboardIdentifier="CameraVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Oyc-Ya-8XU" customClass="CameraVC" customModule="Febbler_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Xf-Zv-8oi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="WJE-74-W1l"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cbG-N6-pu2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n6g-Rx-PAD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2801" y="-415"/>
+        </scene>
+        <!--NotificationVC-->
+        <scene sceneID="mKE-SJ-w5N">
+            <objects>
+                <viewController storyboardIdentifier="NotificationVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0ol-Nd-DyX" customClass="NotificationVC" customModule="Febbler_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iem-y7-KZh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jhn-0j-CJb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Notifications" id="EeF-Hs-nMz">
+                                        <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" id="adQ-8E-i76">
+                                            <connections>
+                                                <action selector="back_Home:" destination="0ol-Nd-DyX" id="kbG-Gb-CsY"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Jhn-0j-CJb" firstAttribute="top" secondItem="pls-vX-wO2" secondAttribute="top" id="0za-kj-ZgL"/>
+                            <constraint firstItem="Jhn-0j-CJb" firstAttribute="trailing" secondItem="pls-vX-wO2" secondAttribute="trailing" id="bZU-bt-xKi"/>
+                            <constraint firstItem="Jhn-0j-CJb" firstAttribute="leading" secondItem="pls-vX-wO2" secondAttribute="leading" id="slg-TX-IdL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pls-vX-wO2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0Zb-xv-olh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ff-CS-sXn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4186" y="-404"/>
+        </scene>
+        <!--SearchVC-->
+        <scene sceneID="LeY-FI-j1k">
+            <objects>
+                <viewController storyboardIdentifier="SearchVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cQC-lk-QDl" customClass="SearchVC" customModule="Febbler_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4fg-5Y-6ry">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A5J-vd-Haz">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Search" id="ZfJ-vV-Xpu">
+                                        <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" id="j0C-h4-2QH">
+                                            <connections>
+                                                <action selector="back_Home:" destination="cQC-lk-QDl" id="qnW-sl-3o2"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YGG-FX-DaA" firstAttribute="trailing" secondItem="A5J-vd-Haz" secondAttribute="trailing" id="hkQ-uy-IOR"/>
+                            <constraint firstItem="A5J-vd-Haz" firstAttribute="leading" secondItem="4fg-5Y-6ry" secondAttribute="leading" id="rOp-9c-9u5"/>
+                            <constraint firstItem="A5J-vd-Haz" firstAttribute="top" secondItem="YGG-FX-DaA" secondAttribute="top" id="zfe-bp-lQm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YGG-FX-DaA"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CKh-63-AYc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sGM-0A-IYN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3487" y="-415"/>
+        </scene>
+        <!--Sign InVC-->
+        <scene sceneID="VW8-ql-x5c">
+            <objects>
+                <viewController storyboardIdentifier="SignInVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="J31-27-3XI" customClass="SignInVC" customModule="Febbler_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IRa-fq-X4C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="af8-wf-vXK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Sign In" id="dDd-7N-iQM">
+                                        <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" id="yD0-6H-06c">
+                                            <connections>
+                                                <action selector="back_Home:" destination="J31-27-3XI" id="TkF-cg-FzI"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dg1-xo-s3P">
+                                <rect key="frame" x="20" y="428" width="374" height="40"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQl-W7-xAD">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="vR3-ek-7Ky"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="af8-wf-vXK" firstAttribute="top" secondItem="8lO-hR-F5X" secondAttribute="top" id="034-Rg-kbS"/>
+                            <constraint firstItem="af8-wf-vXK" firstAttribute="trailing" secondItem="8lO-hR-F5X" secondAttribute="trailing" id="CFE-wv-xHb"/>
+                            <constraint firstItem="dg1-xo-s3P" firstAttribute="leading" secondItem="8lO-hR-F5X" secondAttribute="leading" constant="20" id="JUa-aH-V5J"/>
+                            <constraint firstItem="dg1-xo-s3P" firstAttribute="centerY" secondItem="IRa-fq-X4C" secondAttribute="centerY" id="JzF-ha-Rsv"/>
+                            <constraint firstItem="af8-wf-vXK" firstAttribute="leading" secondItem="8lO-hR-F5X" secondAttribute="leading" id="SOK-sQ-7cs"/>
+                            <constraint firstItem="dg1-xo-s3P" firstAttribute="centerX" secondItem="IRa-fq-X4C" secondAttribute="centerX" id="amc-aE-eO5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8lO-hR-F5X"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="c1O-E4-QyN"/>
+                    <connections>
+                        <outlet property="Google_SignIn_View" destination="iQl-W7-xAD" id="EFd-yZ-1SA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R5v-H2-2gx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4860" y="-404"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EoB-HA-Ixm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="HYa-iM-0gB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LIs-Vt-Vyo">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aUY-Tl-L16" kind="relationship" relationship="rootViewController" id="Psp-wb-qYx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IKF-WQ-JMw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1180" y="-415.14242878560725"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="a.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="camera.fill" catalog="system" width="128" height="96"/>
+        <image name="flag.fill" catalog="system" width="128" height="121"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+    </resources>
 </document>
