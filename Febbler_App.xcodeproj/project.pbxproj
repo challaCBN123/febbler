@@ -77,19 +77,43 @@
 			children = (
 				4C1E5F6324F6720B0055AB7A /* AppDelegate.swift */,
 				4C1E5F6524F6720B0055AB7A /* SceneDelegate.swift */,
-				4CBEB5DD24F7876A0012A958 /* utilities.swift */,
-				4CBEB5DB24F7875C0012A958 /* BaseServices.swift */,
-				4C1E5F7A24F6723D0055AB7A /* HomeVC.swift */,
-				4C1E5F7924F6723D0055AB7A /* CameraVC.swift */,
-				4C1E5F7B24F6723E0055AB7A /* SearchVC.swift */,
-				4C1E5F7724F6723B0055AB7A /* NotificationVC.swift */,
-				4C1E5F7824F6723C0055AB7A /* SignInVC.swift */,
+				4CBEB5DF24F78AC00012A958 /* Utilities */,
+				4CBEB5E024F78AD80012A958 /* Services */,
+				4CBEB5E124F78AE70012A958 /* Controllers */,
 				4C1E5F6924F6720B0055AB7A /* Main.storyboard */,
 				4C1E5F6C24F6720D0055AB7A /* Assets.xcassets */,
 				4C1E5F6E24F6720D0055AB7A /* LaunchScreen.storyboard */,
 				4C1E5F7124F6720D0055AB7A /* Info.plist */,
 			);
 			path = Febbler_App;
+			sourceTree = "<group>";
+		};
+		4CBEB5DF24F78AC00012A958 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4CBEB5DD24F7876A0012A958 /* utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4CBEB5E024F78AD80012A958 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4CBEB5DB24F7875C0012A958 /* BaseServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4CBEB5E124F78AE70012A958 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C1E5F7A24F6723D0055AB7A /* HomeVC.swift */,
+				4C1E5F7924F6723D0055AB7A /* CameraVC.swift */,
+				4C1E5F7B24F6723E0055AB7A /* SearchVC.swift */,
+				4C1E5F7724F6723B0055AB7A /* NotificationVC.swift */,
+				4C1E5F7824F6723C0055AB7A /* SignInVC.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		67245D4E8A87BB5E341FA793 /* Pods */ = {
